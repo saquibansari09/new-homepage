@@ -1,0 +1,157 @@
+.container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 60px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #14279b;
+  margin-left: 10px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgb(178, 172, 162);
+  padding-right: 20px;
+}
+
+.link {
+  font-size: 15px;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.3s;
+}
+
+.activeLink {
+  color: blue;
+}
+
+.contactButton {
+  font-size: 15px;
+  color: #fff;
+  background-color: rgb(16, 31, 124);
+  text-decoration: none;
+  border-radius: 50px; /* Updated border radius */
+  transition: background-color 0.3s;
+}
+
+.contactButton:hover {
+  background-color: rgb(117, 167, 237);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding-right: 20px; /* Adjust padding if needed */
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 92%;
+  background-color: #e5e3e3;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  z-index: 2000;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.modalOpen {
+  display: flex;
+}
+
+.close {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.modalLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 20px;
+  width: 100%; /* Make sure modalLinks take full width */
+}
+
+.modalLinks .link {
+  color: black;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.modalLinks .link:hover {
+  color: #14279b;
+}
+
+.modalLinks .contactButton {
+  color: #fff;
+  background-color: rgb(16, 31, 124);
+  font-size: 20px;
+  border-radius: 50px; /* Updated border radius */
+  width: 100%; /* Make the button take full width of its container */
+  padding: 10px 14px;
+  margin-left: -30px;
+}
+.modalLinks .contactButton:hover {
+  color: #fff;
+  background-color: rgb(117, 167, 237);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .modalLinks .link,
+  .modalLinks .contactButton {
+    font-size: 18px;
+  }
+}

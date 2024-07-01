@@ -1,0 +1,190 @@
+.container {
+  padding: 60px 0px;
+  animation: fadeIn 1s ease-out forwards;
+  position: relative;
+  margin-top: 130px;
+}
+
+.title-container,
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #14279b;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title::before {
+  left: 50%;
+  transform: translateX(-160px) translateY(-50%);
+}
+
+.title::after {
+  right: 50%;
+  transform: translateX(160px) translateY(-50%);
+}
+
+.title {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
+  font-family: "Raleway", sans-serif;
+}
+
+.intro {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #444444;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+  text-align: center;
+}
+
+.processList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  max-width: 290px;
+  min-width: 260px;
+  line-height: 25px;
+  opacity: 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #14279b;
+  z-index: -1;
+  transform-origin: top right;
+  transform: scaleX(0) scaleY(0);
+  transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+  border-radius: 8px;
+}
+
+.card:hover::before {
+  transform: scaleX(1) scaleY(1);
+  border-radius: 8px;
+}
+
+.card:hover {
+  color: #fff;
+}
+
+/* Added icon circle background */
+.icon {
+  font-size: 2em;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #14279b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for icon background */
+.card:hover .icon::before {
+  background-color: #fff;
+}
+
+.card:hover .icon {
+  color: #14279b;
+}
+
+.cardTitle {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 1em;
+  color: #777;
+}
+
+.card:hover .cardTitle,
+.card:hover .cardDescription {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.9s;
+}

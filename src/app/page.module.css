@@ -1,0 +1,237 @@
+/* Base styles for larger screens */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.item {
+  padding-right: 40px;
+  gap: 50px;
+}
+
+.title {
+  font-size: 48px;
+  color: #14279b;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 140px;
+  display: grid;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* animation: move 3s infinite ease alternate; */
+}
+
+.desc {
+  font-size: 30px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  color: #484848;
+}
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background-color: #14279b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.scrollToTopButton:hover {
+  background-color: #005bb5;
+}
+
+.scrollToTopButton:focus {
+  outline: none;
+}
+
+/* Media queries for responsive adjustments */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+  .container {
+    flex-direction: column;
+    gap: 50px; /* Reduce gap between items */
+    margin-top: 50px; /* Adjust margin */
+  }
+
+  .item {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .desc {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .img {
+    height: 300px; /* Adjust image height */
+  }
+
+  .scrollToTopButton {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+  .container {
+    gap: 50px; /* Reduce gap between items */
+    margin-top: 60px; /* Adjust margin */
+  }
+
+  .item {
+    padding: 0 40px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .desc {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .img {
+    height: 400px; /* Adjust image height */
+  }
+
+  .scrollToTopButton {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {
+  .container {
+    gap: 50px; /* Reduce gap between items */
+    margin-top: 70px; /* Adjust margin */
+  }
+
+  .item {
+    padding: 0 60px;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .desc {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+
+  .img {
+    height: 450px; /* Adjust image height */
+  }
+
+  .scrollToTopButton {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {
+  .container {
+    margin-top: 80px; /* Adjust margin */
+  }
+
+  .item {
+    padding: 0 80px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .desc {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+
+  .img {
+    height: 500px; /* Default image height */
+  }
+
+  .scrollToTopButton {
+    bottom: 25px;
+    right: 25px;
+    padding: 14px 28px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* No changes needed beyond large devices */
+}
+
+/* Tablets in landscape (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    margin-top: 80px; /* Adjust margin */
+  }
+
+  .item {
+    padding: 0 60px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .desc {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .img {
+    height: 400px; /* Adjust image height */
+  }
+
+  .scrollToTopButton {
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 24px;
+  }
+}
+
+/* High DPI devices (such as Retina displays) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .img {
+    /* Adjust image styles for high DPI screens */
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Adjust styles for printing */
+  .scrollToTopButton {
+    display: none; /* Hide scroll-to-top button when printing */
+  }
+}

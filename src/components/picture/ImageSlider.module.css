@@ -1,0 +1,87 @@
+/* Base styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  animation: fadeIn 1s ease-in-out;
+  background-color: #f3f9fd;
+  width: 100%;
+  padding: 10px;
+  gap: 20px; /* Set a constant space between images */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.image {
+  transition: transform 0.3s ease-in-out;
+  margin: 0 70px;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .sliderContainer {
+    height: 200px;
+  }
+}
+
+/* Medium devices (tablets, 1024px to 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .sliderContainer {
+    height: 150px;
+  }
+}
+
+/* iPads in portrait and landscape (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sliderContainer {
+    height: auto;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+  .sliderContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    height: auto;
+    margin: auto;
+    width: 100%;
+  }
+
+  .image {
+    justify-self: center;
+    margin: 0 50px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .sliderContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    height: auto;
+    margin: auto;
+    width: 100%;
+  }
+
+  .image {
+    justify-self: center;
+    margin: 0 50px;
+  }
+}
