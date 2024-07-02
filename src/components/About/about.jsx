@@ -1,5 +1,5 @@
 // components/About.js
-
+"use client";
 import React from "react";
 import styles from "./about.module.css";
 import Button from "@/components/Button/Button";
