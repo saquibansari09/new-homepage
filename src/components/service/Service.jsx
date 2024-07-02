@@ -6,6 +6,7 @@ import {
   FaCode,
   FaBullhorn,
 } from "react-icons/fa";
+import ScrollAnimation from "../scrollanimation/ScrollAnimation";
 
 const processSteps = [
   {
@@ -39,20 +40,24 @@ const processSteps = [
 const Service = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>SERVICES</h1>
-      <p className={styles.intro}>
-        Over the years we’ve evolved a tested method for attaining achievement
-        for each one of our clients.
-      </p>
-      <div className={styles.processList}>
-        {processSteps.map((step, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.icon}>{step.icon}</div>
-            <h2 className={styles.cardTitle}>{step.title}</h2>
-            <p className={styles.cardDescription}>{step.description}</p>
-          </div>
-        ))}
-      </div>
+      <ScrollAnimation>
+        <h1 className={styles.title}>SERVICES</h1>
+        <p className={styles.intro}>
+          Over the years we’ve evolved a tested method for attaining achievement
+          for each one of our clients.
+        </p>
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <div className={styles.processList}>
+          {processSteps.map((step, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.icon}>{step.icon}</div>
+              <h2 className={styles.cardTitle}>{step.title}</h2>
+              <p className={styles.cardDescription}>{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </ScrollAnimation>
     </div>
   );
 };

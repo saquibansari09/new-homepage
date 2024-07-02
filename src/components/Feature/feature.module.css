@@ -153,7 +153,7 @@
 /* Media Queries */
 @media (max-width: 1400px) {
   .card {
-    width: calc(33.33% - 20px); /* Three cards per row */
+    width: calc(33.33% - 20px); 
   }
 }
 
@@ -162,7 +162,7 @@
     padding: 0 40px;
   }
   .card {
-    width: calc(43.33% - 20px); /* Three cards per row */
+    width: calc(43.33% - 20px); 
   }
 }
 
@@ -171,7 +171,7 @@
     padding: 0 20px;
   }
   .card {
-    width: calc(50% - 20px); /* Two cards per row */
+    width: calc(50% - 20px);
   }
 }
 
@@ -180,7 +180,7 @@
     padding: 0 10px;
   }
   .card {
-    width: calc(50% - 20px); /* Two cards per row */
+    width: calc(50% - 20px); 
   }
 }
 
@@ -189,7 +189,7 @@
     padding: 0 10px;
   }
   .card {
-    width: 100%; /* One card per row */
+    width: 100%; 
     margin-left: 20px;
     margin-right: 20px;
   }

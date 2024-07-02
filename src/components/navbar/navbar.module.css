@@ -1,8 +1,9 @@
 .container {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: auto;
+  padding: 20px;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,13 +11,11 @@
   background-color: white;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 60px;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  padding-left: 20px;
 }
 
 .logo {
@@ -51,7 +50,7 @@
   color: #fff;
   background-color: rgb(16, 31, 124);
   text-decoration: none;
-  border-radius: 50px; /* Updated border radius */
+  border-radius: 50px;
   transition: background-color 0.3s;
 }
 
@@ -64,7 +63,6 @@
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  padding-right: 20px; /* Adjust padding if needed */
 }
 
 .hamburgerLine {
@@ -81,7 +79,7 @@
   transform: translate(-50%, -50%);
   width: 95%;
   height: 92%;
-  background-color: #e5e3e3;
+  background-color: #fffbfb;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
@@ -108,7 +106,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 10px 20px;
-  width: 100%; /* Make sure modalLinks take full width */
+  width: 100%;
 }
 
 .modalLinks .link {
@@ -125,8 +123,8 @@
   color: #fff;
   background-color: rgb(16, 31, 124);
   font-size: 20px;
-  border-radius: 50px; /* Updated border radius */
-  width: 100%; /* Make the button take full width of its container */
+  border-radius: 50px;
+  width: 100%;
   padding: 10px 14px;
   margin-left: -30px;
 }

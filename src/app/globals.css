@@ -16,6 +16,19 @@ body {
   color: #444444;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+P {
+  font-family: "Raleway", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: inherit;

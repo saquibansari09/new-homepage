@@ -11,6 +11,7 @@ import { FaAdversal } from "react-icons/fa";
 import { MdOutlineBrandingWatermark } from "react-icons/md";
 import { GiMusicSpell } from "react-icons/gi";
 import { FaRegCalendarAlt, FaCode } from "react-icons/fa";
+import ScrollAnimation from "../scrollanimation/ScrollAnimation";
 
 const processSteps = [
   {
@@ -68,25 +69,29 @@ const processSteps = [
 const OurProcess = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>OUR CORE FEATURES</h1>
-      <p className={styles.intro}>
-        Akeshya is a forward-thinking and intelligent design firm that is
-        technically and creatively capable of transforming your brand into its
-        best digital self. Our approach to design and development results in
-        compelling, engaging branding and immersive digital experiences that
-        provide a value for money.
-      </p>
-      <div className={styles.processList}>
-        {processSteps.map((step, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.iconContainer}>
-              <div className={styles.icon}>{step.icon}</div>
-              <h2 className={styles.cardTitle}>{step.title}</h2>
+      <ScrollAnimation>
+        <h1 className={styles.title}>OUR CORE FEATURES</h1>
+        <p className={styles.intro}>
+          Akeshya is a forward-thinking and intelligent design firm that is
+          technically and creatively capable of transforming your brand into its
+          best digital self. Our approach to design and development results in
+          compelling, engaging branding and immersive digital experiences that
+          provide a value for money.
+        </p>
+      </ScrollAnimation>
+      <ScrollAnimation>
+        <div className={styles.processList}>
+          {processSteps.map((step, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.iconContainer}>
+                <div className={styles.icon}>{step.icon}</div>
+                <h2 className={styles.cardTitle}>{step.title}</h2>
+              </div>
+              <p className={styles.cardText}>{step.text}</p>
             </div>
-            <p className={styles.cardText}>{step.text}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </ScrollAnimation>
     </div>
   );
 };
